@@ -1,15 +1,781 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-   <remote name="gitlab" fetch="https://gitlab.com" />
-<!-- Device Trees -->
-  <project path="device/xiaomi/tulip" name="xyz-sundram/device_xiaomi_twolip" remote="github" revision="eleven" />
-  <project path="device/xiaomi/sdm660-common" name="xyz-sundram/device_xiaomi_tulip-common" remote="github" revision="11" />
-<!-- Vendor Trees -->
-  <project path="vendor/xiaomi/tulip" name="PixelPlusUI-Devices/vendor_xiaomi_tulip" remote="github" revision="11" />
-  <project path="vendor/xiaomi/sdm660-common" name="PixelPlusUI-Devices/vendor_xiaomi_tulip-common" remote="github" revision="11" />
-  <project path="vendor/miuicamera" name="Havoc-Devices/android_vendor_xiaomi_tulip-MiuiCamera" remote="github" revision="eleven" />
-  <project path="vendor/gapps" name="arrowos-project/android_vendor_gapps" remote="gitlab" revision="arrow-11.0" />
-<!-- Kernel Trees -->
-<project path="kernel/xiaomi/tulip" name="matheucomth/kernel_xiaomi_sdm660" remote="github" revision="13" />
+   <remote  name="github"
+           fetch=".." />
+
+  <remote  name="havoc"
+           fetch="https://github.com/Havoc-OS"
+           revision="eleven" />
+
+<remote  name="revive"
+           fetch="https://github.com/Havoc-OS-Revived"
+           revision="eleven" />
+
   
+  <remote  name="havoc-devices"
+           fetch="https://github.com/Havoc-Devices"
+           revision="eleven" />
+
+  <remote  name="havoc-gitlab"
+           fetch="https://gitlab.com/Havoc-GApps"
+           revision="eleven" />
+  
+
+<project path="device/xiaomi/tulip" name="xyz-sundram/device_xiaomi_twolip" remote="github" revision="havoc-11" />
+<project path="device/xiaomi/sdm660-common" name="xyz-sundram/device_xiaomi_tulip-common" remote="github" revision="11" />
+<project path="vendor/xiaomi/tulip" name="PixelPlusUI-Devices/vendor_xiaomi_tulip" remote="github" revision="11" />
+<project path="vendor/xiaomi/sdm660-common" name="PixelPlusUI-Devices/vendor_xiaomi_tulip-common" remote="github" revision="11" />
+<project path="vendor/miuicamera" name="Havoc-Devices/android_vendor_xiaomi_tulip-MiuiCamera" remote="github" revision="eleven" />
+<project path="kernel/xiaomi/tulip" name="matheucomth/kernel_xiaomi_sdm660" remote="github" revision="13" />
+
+
+  <!-- crDroid additions -->
+  <remove-project name="crdroidandroid/android" />
+  <!--<project path="android" name="crdroidandroid/android" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_art" /> 
+  <!-- <project path="art" name="crdroidandroid/android_art" remote="crdroid" /> -->
+
+<remove-project name="crdroidandroid/android_bionic" />
+<!-- <project path="bionic" name="crdroidandroid/android_bionic" remote="crdroid" /> -->
+
+<remove-project name="crdroidandroid/android_bootable_recovery" />
+  <!-- <project path="bootable/recovery" name="crdroidandroid/android_bootable_recovery" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_build" />
+  <!-- <project path="build/make" name="crdroidandroid/android_build" remote="crdroid" > 
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project> -->
+
+<remove-project name="crdroidandroid/android_build_soong" />
+  <!--<project path="build/soong" name="crdroidandroid/android_build_soong" remote="crdroid" > 
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project> -->
+
+<remove-project name="crdroidandroid/android_device_crdroid_sepolicy" />
+  <!-- <project path="device/lineage/sepolicy" name="crdroidandroid/android_device_crdroid_sepolicy" remote="crdroid" /> -->
+  
+<remove-project name="crdroidandroid/android_external_arm-optimized-routines" />
+  <!-- <project path="external/arm-optimized-routines" name="crdroidandroid/android_external_arm-optimized-routines" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_asus_stitchimage" />
+  <!-- <project path="external/asus/stitchimage" name="crdroidandroid/android_external_asus_stitchimage" remote="crdroid" /> -->
+
+<remove-project name="crdroidandroid/android_external_asus_stitchimage" />
+  <!-- <project path="external/cpu_features" name="crdroidandroid/android_external_cpu_features" remote="crdroid" /> -->
+  <remove-project name="crdroidandroid/android_external_expat" />
+  <!-- <project path="external/expat" name="crdroidandroid/android_external_expat" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_faceunlock" />
+  <!-- <project path="external/faceunlock" name="crdroidandroid/android_external_faceunlock" remote="crdroid-gitlab" /> -->
+
+  <remove-project name="crdroidandroid/android_external_freetype" />
+  <!-- <project path="external/freetype" name="crdroidandroid/android_external_freetype" remote="crdroid" /> -->
+
+ <remove-project name="crdroidandroid/android_external_giflib" />
+  <!-- <project path="external/giflib" name="crdroidandroid/android_external_giflib" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_harfbuzz_ng" />
+  <!-- <project path="external/harfbuzz_ng" name="crdroidandroid/android_external_harfbuzz_ng" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_jemalloc-new" />
+  <!-- <project path="external/jemalloc_new" name="crdroidandroid/android_external_jemalloc-new" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_libcxx" />
+  <!-- <project path="external/libcxx" name="crdroidandroid/android_external_libcxx" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_libhevc" />
+  <!-- <project path="external/libhevc" name="crdroidandroid/android_external_libhevc" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_libjpeg-turbo" />
+  <!-- <project path="external/libjpeg-turbo" name="crdroidandroid/android_external_libjpeg-turbo" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_libpng" />
+  <!-- <project path="external/libpng" name="crdroidandroid/android_external_libpng" remote="crdroid" / -->
+  
+  <remove-project name="crdroidandroid/android_external_libvpx" />
+  <!-- <project path="external/libvpx" name="crdroidandroid/android_external_libvpx" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_libyuv" />
+  <!-- <project path="external/libyuv" name="crdroidandroid/android_external_libyuv" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_lz4" />
+  <!-- <project path="external/lz4" name="crdroidandroid/android_external_lz4" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_python_cpython2" />
+  <!-- <project path="external/python/cpython2" name="crdroidandroid/android_external_python_cpython2" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_scudo" />
+  <!-- <project path="external/scudo" name="crdroidandroid/android_external_scudo" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_skia" />
+  <!-- <project path="external/skia" name="crdroidandroid/android_external_skia" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_sqlite" />
+  <!-- <project path="external/sqlite" name="crdroidandroid/android_external_sqlite" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_vixl" />
+  <!-- <project path="external/vixl" name="crdroidandroid/android_external_vixl" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_wpa_supplicant_8" />
+  <!-- <project path="external/wpa_supplicant_8" name="crdroidandroid/android_external_wpa_supplicant_8" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_external_zlib" />
+  <!-- <project path="external/zlib" name="crdroidandroid/android_external_zlib" remote="crdroid" /> -->
+
+
+<remove-project name="crdroidandroid/android_frameworks_av" />
+  <!-- <project path="frameworks/av" name="crdroidandroid/android_frameworks_av" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_frameworks_base" />
+  <!-- <project path="frameworks/base" name="crdroidandroid/android_frameworks_base" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_frameworks_libs_systemui" />
+  <!-- <project path="frameworks/libs/systemui" name="crdroidandroid/android_frameworks_libs_systemui" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_frameworks_native" />
+  <!-- <project path="frameworks/native" name="crdroidandroid/android_frameworks_native" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_frameworks_opt_net_wifi" />
+  <!-- <project path="frameworks/opt/net/wifi" name="crdroidandroid/android_frameworks_opt_net_wifi" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_frameworks_opt_telephony" />
+  <!-- <project path="frameworks/opt/telephony" name="crdroidandroid/android_frameworks_opt_telephony" remote="crdroid" /> -->
+
+  <remove-project name="crdroidandroid/android_frameworks_support_lottie" />
+  <!-- <project path="frameworks/support/lottie" name="crdroidandroid/android_frameworks_support_lottie" remote="crdroid" /> -->
+
+
+<remove-project name="crdroidandroid/android_hardware_interfaces" />
+<!-- <project path="hardware/interfaces" name="crdroidandroid/android_hardware_interfaces" /> -->
+<remove-project name="crdroidandroid/android_hardware_lineage_interfaces" />
+<!-- <project path="hardware/lineage/interfaces" name="crdroidandroid/android_hardware_lineage_interfaces" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_audio" />
+<!-- <project path="hardware/qcom-caf/msm8996/audio" name="crdroidandroid/android_hardware_qcom_audio" revision="11.0-caf-msm8996" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_display" />
+<!-- <project path="hardware/qcom-caf/msm8996/display" name="crdroidandroid/android_hardware_qcom_display" revision="11.0-caf-msm8996" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_media" />
+<!-- <project path="hardware/qcom-caf/msm8996/media" name="crdroidandroid/android_hardware_qcom_media" revision="11.0-caf-msm8996" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_audio" />
+<!-- <project path="hardware/qcom-caf/msm8998/audio" name="crdroidandroid/android_hardware_qcom_audio" revision="11.0-caf-msm8998" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_display" />
+<!-- <project path="hardware/qcom-caf/msm8998/display" name="crdroidandroid/android_hardware_qcom_display" revision="11.0-caf-msm8998" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_media" />
+<!-- <project path="hardware/qcom-caf/msm8998/media" name="crdroidandroid/android_hardware_qcom_media" revision="11.0-caf-msm8998" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_audio" />
+<!-- <project path="hardware/qcom-caf/sm8150/audio" name="crdroidandroid/android_hardware_qcom_audio" revision="11.0-caf-sm8150" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_display" />
+<!-- <project path="hardware/qcom-caf/sm8150/display" name="crdroidandroid/android_hardware_qcom_display" revision="11.0-caf-sm8150" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_media" />
+<!-- <project path="hardware/qcom-caf/sm8150/media" name="crdroidandroid/android_hardware_qcom_media" revision="11.0-caf-sm8150" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_audio" />
+<!-- <project path="hardware/qcom-caf/sm8350/audio" name="crdroidandroid/android_hardware_qcom_audio" revision="11.0-caf-sm8350" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_display" />
+<!-- <project path="hardware/qcom-caf/sm8350/display" name="crdroidandroid/android_hardware_qcom_display" revision="11.0-caf-sm8350" /> -->
+<remove-project name="crdroidandroid/android_hardware_qcom_media" />
+<!-- <project path="hardware/qcom-caf/sm8350/media" name="crdroidandroid/android_hardware_qcom_media" revision="11.0-caf-sm8350" /> -->
+<remove-project name="crdroidandroid/android_hardware_ril" />
+<!-- <project path="hardware/ril" name="crdroidandroid/android_hardware_ril" /> -->
+
+
+
+
+<remove-project name="crdroidandroid/android_hardware_interfaces" />
+<remove-project name="crdroidandroid/android_hardware_lineage_interfaces" />
+<remove-project name="crdroidandroid/android_hardware_qcom_audio" />
+<remove-project name="crdroidandroid/android_hardware_qcom_display" />
+<remove-project name="crdroidandroid/android_hardware_qcom_media" />
+<remove-project name="crdroidandroid/android_hardware_qcom_audio" />
+<remove-project name="crdroidandroid/android_hardware_qcom_display" />
+<remove-project name="crdroidandroid/android_hardware_qcom_media" />
+<remove-project name="crdroidandroid/android_hardware_qcom_audio" />
+<remove-project name="crdroidandroid/android_hardware_qcom_display" />
+<remove-project name="crdroidandroid/android_hardware_qcom_media" />
+<remove-project name="crdroidandroid/android_hardware_qcom_audio" />
+<remove-project name="crdroidandroid/android_hardware_qcom_display" />
+<remove-project name="crdroidandroid/android_hardware_qcom_media" />
+<remove-project name="crdroidandroid/android_hardware_ril" />
+
+  <!--<project path="hardware/interfaces" name="crdroidandroid/android_hardware_interfaces" remote="crdroid" />
+  <project path="hardware/lineage/interfaces" name="crdroidandroid/android_hardware_lineage_interfaces" remote="crdroid" />
+  <project path="hardware/qcom-caf/msm8996/audio" name="crdroidandroid/android_hardware_qcom_audio" revision="11.0-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8996/display" name="crdroidandroid/android_hardware_qcom_display" revision="11.0-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8996/media" name="crdroidandroid/android_hardware_qcom_media" revision="11.0-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8998/audio" name="crdroidandroid/android_hardware_qcom_audio" revision="11.0-caf-msm8998" />
+  <project path="hardware/qcom-caf/msm8998/display" name="crdroidandroid/android_hardware_qcom_display" revision="11.0-caf-msm8998" />
+  <project path="hardware/qcom-caf/msm8998/media" name="crdroidandroid/android_hardware_qcom_media" revision="11.0-caf-msm8998" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="crdroidandroid/android_hardware_qcom_audio" revision="11.0-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="crdroidandroid/android_hardware_qcom_display" revision="11.0-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/media" name="crdroidandroid/android_hardware_qcom_media" revision="11.0-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8350/audio" name="crdroidandroid/android_hardware_qcom_audio" revision="11.0-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8350/display" name="crdroidandroid/android_hardware_qcom_display" revision="11.0-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8350/media" name="crdroidandroid/android_hardware_qcom_media" revision="11.0-caf-sm8350" />
+  <project path="hardware/ril" name="crdroidandroid/android_hardware_ril" remote="crdroid" /> -->
+
+
+<remove-project name="crdroidandroid/android_libcore" />
+<remove-project name="crdroidandroid/android_lineage-sdk" />
+<remove-project name="crdroidandroid/android_packages_apps_CellBroadcastReceiver" />
+<remove-project name="crdroidandroid/android_packages_apps_Contacts" />
+<remove-project name="crdroidandroid/android_packages_apps_crDroidMusic" />
+<remove-project name="crdroidandroid/android_packages_apps_crDroidSettings" />
+<remove-project name="crdroidandroid/android_packages_apps_Dialer" />
+<remove-project name="crdroidandroid/android_packages_apps_ExactCalculator" />
+<remove-project name="crdroidandroid/android_packages_apps_FaceUnlockService" />
+<remove-project name="crdroidandroid/android_packages_apps_Launcher3" />
+<remove-project name="crdroidandroid/android_packages_apps_LineageParts" />
+<remove-project name="crdroidandroid/android_packages_apps_Matlog" />
+<remove-project name="crdroidandroid/android_packages_apps_Messaging" />
+<remove-project name="crdroidandroid/android_packages_apps_OmniStyle" />
+<remove-project name="crdroidandroid/android_packages_apps_PackageInstaller" />
+<remove-project name="crdroidandroid/android_packages_apps_Settings" />
+<remove-project name="crdroidandroid/android_packages_apps_SetupWizard" />
+<remove-project name="crdroidandroid/android_packages_apps_ThemePicker" />
+<remove-project name="crdroidandroid/android_packages_apps_Updater" />
+<remove-project name="crdroidandroid/android_packages_inputmethods_LatinIME" />
+<remove-project name="crdroidandroid/android_packages_services_OmniJaws" />
+<remove-project name="crdroidandroid/android_packages_services_Telecomm" />
+<remove-project name="crdroidandroid/android_packages_services_Telephony" />
+<remove-project name="crdroidandroid/android_prebuilts_abi-dumps_vndk" />
+<remove-project name="crdroidandroid/android_prebuilts_build-tools" />
+<remove-project name="crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r445002" />
+<remove-project name="crdroidandroid/android_prebuilts_r8" />
+<remove-project name="crdroidandroid/android_system_bpf" />
+<remove-project name="crdroidandroid/android_system_core" />
+<remove-project name="crdroidandroid/android_system_hardware_interfaces" />
+<remove-project name="crdroidandroid/android_system_hwservicemanager" />
+<remove-project name="crdroidandroid/android_system_iorap" />
+<remove-project name="crdroidandroid/android_system_libhwbinder" />
+<remove-project name="crdroidandroid/android_system_linkerconfig" />
+<remove-project name="crdroidandroid/android_system_memory_lmkd" />
+<remove-project name="crdroidandroid/android_system_netd" />
+<remove-project name="crdroidandroid/android_system_security" />
+<remove-project name="crdroidandroid/android_system_sepolicy" />
+<remove-project name="crdroidandroid/android_system_update_engine" />
+<remove-project name="crdroidandroid/android_system_vold" />
+<remove-project name="crdroidandroid/android_tools_extract-utils" />
+<remove-project name="crdroidandroid/android_tools_metalava" />
+<remove-project name="crdroidandroid/android_vendor_addons" />
+<remove-project name="crdroidandroid/android_vendor_codeaurora_telephony" />
+<remove-project name="crdroidandroid/android_vendor_crDroidOTA" />
+<remove-project name="crdroidandroid/android_vendor_crdroid" />
+<remove-project name="crdroidandroid/android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+<remove-project name="crdroidandroid/android_vendor_qcom_opensource_bluetooth_ext" />
+<remove-project name="crdroidandroid/android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+<remove-project name="crdroidandroid/android_vendor_qcom_opensource_system_bt" />
+<remove-project name="crdroidandroid/android_vendor_qcom_opensource_data-ipa-cfg-mgr" />
+<remove-project name="crdroidandroid/android_vendor_qcom_opensource_power" />
+
+
+ <!-- <project path="libcore" name="crdroidandroid/android_libcore" remote="crdroid" />
+
+  <project path="lineage-sdk" name="crdroidandroid/android_lineage-sdk" remote="crdroid" />
+
+  <project path="packages/apps/CellBroadcastReceiver" name="crdroidandroid/android_packages_apps_CellBroadcastReceiver" remote="crdroid" />
+  <project path="packages/apps/Contacts" name="crdroidandroid/android_packages_apps_Contacts" remote="crdroid" />
+  <project path="packages/apps/crDroidMusic" name="crdroidandroid/android_packages_apps_crDroidMusic" remote="crdroid" />
+  <project path="packages/apps/crDroidSettings" name="crdroidandroid/android_packages_apps_crDroidSettings" remote="crdroid" />
+  <project path="packages/apps/Dialer" name="crdroidandroid/android_packages_apps_Dialer" remote="crdroid" />
+  <project path="packages/apps/ExactCalculator" name="crdroidandroid/android_packages_apps_ExactCalculator" remote="crdroid" />
+  <project path="packages/apps/FaceUnlockService" name="crdroidandroid/android_packages_apps_FaceUnlockService" remote="crdroid" />
+  <project path="packages/apps/Launcher3" name="crdroidandroid/android_packages_apps_Launcher3" remote="crdroid" />
+  <project path="packages/apps/LineageParts" name="crdroidandroid/android_packages_apps_LineageParts" remote="crdroid" />
+  <project path="packages/apps/Matlog" name="crdroidandroid/android_packages_apps_Matlog" remote="crdroid" />
+  <project path="packages/apps/Messaging" name="crdroidandroid/android_packages_apps_Messaging" remote="crdroid" />
+  <project path="packages/apps/OmniStyle" name="crdroidandroid/android_packages_apps_OmniStyle" remote="crdroid" />
+  <project path="packages/apps/PermissionController" name="crdroidandroid/android_packages_apps_PackageInstaller" remote="crdroid" />
+  <project path="packages/apps/Settings" name="crdroidandroid/android_packages_apps_Settings" remote="crdroid" />
+  <project path="packages/apps/SetupWizard" name="crdroidandroid/android_packages_apps_SetupWizard" remote="crdroid" />
+  <project path="packages/apps/ThemePicker" name="crdroidandroid/android_packages_apps_ThemePicker" remote="crdroid" />
+  <project path="packages/apps/Updater" name="crdroidandroid/android_packages_apps_Updater" remote="crdroid" />
+  <project path="packages/inputmethods/LatinIME" name="crdroidandroid/android_packages_inputmethods_LatinIME" remote="crdroid" />
+  <project path="packages/services/OmniJaws" name="crdroidandroid/android_packages_services_OmniJaws" remote="crdroid" />
+  <project path="packages/services/Telecomm" name="crdroidandroid/android_packages_services_Telecomm" remote="crdroid" />
+  <project path="packages/services/Telephony" name="crdroidandroid/android_packages_services_Telephony" remote="crdroid" />
+
+  <project path="prebuilts/abi-dumps/vndk" name="crdroidandroid/android_prebuilts_abi-dumps_vndk" remote="crdroid" />
+  <project path="prebuilts/build-tools" name="crdroidandroid/android_prebuilts_build-tools" clone-depth="1" remote="crdroid" />
+
+
+  <project path="prebuilts/clang/host/linux-x86/clang-latest" name="crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r445002" remote="crdroid-gitlab" />
+
+  <project path="prebuilts/r8" name="crdroidandroid/android_prebuilts_r8" remote="crdroid" clone-depth="1" />
+
+  <project path="system/bpf" name="crdroidandroid/android_system_bpf" remote="crdroid" />
+  <project path="system/core" name="crdroidandroid/android_system_core" remote="crdroid" />
+  <project path="system/hardware/interfaces" name="crdroidandroid/android_system_hardware_interfaces" remote="crdroid" />
+  <project path="system/hwservicemanager" name="crdroidandroid/android_system_hwservicemanager" remote="crdroid" />
+  <project path="system/iorap" name="crdroidandroid/android_system_iorap" remote="crdroid" />
+  <project path="system/libhwbinder" name="crdroidandroid/android_system_libhwbinder" remote="crdroid" />
+  <project path="system/linkerconfig" name="crdroidandroid/android_system_linkerconfig" remote="crdroid" />
+  <project path="system/memory/lmkd" name="crdroidandroid/android_system_memory_lmkd" remote="crdroid" />
+  <project path="system/netd" name="crdroidandroid/android_system_netd" remote="crdroid" />
+  <project path="system/security" name="crdroidandroid/android_system_security" remote="crdroid" />
+  <project path="system/sepolicy" name="crdroidandroid/android_system_sepolicy" remote="crdroid" />
+  <project path="system/update_engine" name="crdroidandroid/android_system_update_engine" remote="crdroid" />
+  <project path="system/vold" name="crdroidandroid/android_system_vold" remote="crdroid" />
+
+  <project path="tools/extract-utils" name="crdroidandroid/android_tools_extract-utils" remote="crdroid" />
+  <project path="tools/metalava" name="crdroidandroid/android_tools_metalava" remote="crdroid" />
+
+  <project path="vendor/addons" name="crdroidandroid/android_vendor_addons" remote="crdroid" />
+  <project path="vendor/codeaurora/telephony" name="crdroidandroid/android_vendor_codeaurora_telephony" remote="crdroid" />
+  <project path="vendor/crDroidOTA" name="crdroidandroid/android_vendor_crDroidOTA" remote="crdroid" />
+  <project path="vendor/lineage" name="crdroidandroid/android_vendor_crdroid" remote="crdroid" />
+  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="crdroidandroid/android_vendor_qcom_opensource_bluetooth-commonsys-intf" remote="crdroid" />
+  <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="crdroidandroid/android_vendor_qcom_opensource_bluetooth_ext" remote="crdroid" />
+  <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="crdroidandroid/android_vendor_qcom_opensource_packages_apps_Bluetooth" remote="crdroid" />
+  <project path="vendor/qcom/opensource/commonsys/system/bt" name="crdroidandroid/android_vendor_qcom_opensource_system_bt" remote="crdroid" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="crdroidandroid/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="crdroid" />
+  <project path="vendor/qcom/opensource/power" name="crdroidandroid/android_vendor_qcom_opensource_power" remote="crdroid" />  -->
+
+<!-- Lineage.xml-->
+<remove-project name="LineageOS/android_device_lineage_atv" />
+<remove-project name="LineageOS/android_device_lineage_car" />
+<remove-project name="LineageOS/android_external_bash" />
+<remove-project name="LineageOS/android_external_chromium-webview_patches" />
+<remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm" />
+<remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm64" />
+<remove-project name="LineageOS/android_external_chromium-webview_prebuilt_x86" />
+<remove-project name="LineageOS/android_external_chromium-webview_prebuilt_x86_64" />
+<remove-project name="LineageOS/android_external_exfatprogs" />
+<remove-project name="LineageOS/android_external_htop" />
+<remove-project name="LineageOS/android_external_libncurses" />
+<remove-project name="LineageOS/android_external_libnfc-nxp" />
+<remove-project name="LineageOS/android_external_nano" />
+<remove-project name="LineageOS/android_external_ntfs-3g" />
+<remove-project name="LineageOS/android_external_p7zip" />
+<remove-project name="LineageOS/android_external_pigz" />
+<remove-project name="LineageOS/android_external_rsync" />
+<remove-project name="LineageOS/android_external_unrar" />
+<remove-project name="LineageOS/android_external_vim" />
+<remove-project name="LineageOS/android_external_zip" />
+<remove-project name="LineageOS/android_hardware_broadcom_nfc" />
+<remove-project name="LineageOS/android_hardware_lineage_livedisplay" />
+<remove-project name="LineageOS/android_packages_apps_AudioFX" />
+<remove-project name="LineageOS/android_packages_apps_Backgrounds" />
+<remove-project name="LineageOS/android_packages_apps_Etar" />
+<remove-project name="LineageOS/android_packages_apps_FMRadio" />
+<remove-project name="LineageOS/android_packages_apps_FlipFlap" />
+<remove-project name="LineageOS/android_packages_apps_Jelly" />
+<remove-project name="LineageOS/android_packages_apps_LineageCustomizer" />
+<remove-project name="LineageOS/android_packages_apps_Profiles" />
+<remove-project name="LineageOS/android_packages_apps_Recorder" />
+<remove-project name="LineageOS/android_packages_apps_Seedvault" />
+<remove-project name="LineageOS/android_packages_apps_SimpleDeviceConfig" />
+<remove-project name="LineageOS/android_packages_apps_Snap" />
+<remove-project name="LineageOS/android_packages_resources_devicesettings" />
+<remove-project name="LineageOS/android_prebuilts_extract-tools" />
+<remove-project name="LineageOS/android_prebuilts_tools-lineage" />
+<remove-project name="LineageOS/android_vendor_crowdin" />
+<remove-project name="LineageOS/android_device_qcom_sepolicy" />
+<remove-project name="LineageOS/android_device_qcom_sepolicy" />
+<remove-project name="LineageOS/android_device_qcom_sepolicy" />
+<remove-project name="LineageOS/android_device_qcom_sepolicy_vndr" />
+<remove-project name="LineageOS/android_external_ant-wireless_ant_client" />
+<remove-project name="LineageOS/android_external_ant-wireless_ant_native" />
+<remove-project name="LineageOS/android_external_ant-wireless_ant_service" />
+<remove-project name="LineageOS/android_external_ant-wireless_antradio-library" />
+<remove-project name="LineageOS/android_external_ant-wireless_hidl" />
+<remove-project name="LineageOS/android_external_connectivity" />
+<remove-project name="LineageOS/android_external_json-c" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_audio" />
+<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="LineageOS/android_hardware_qcom_media" />
+<remove-project name="LineageOS/android_hardware_qcom_thermal" />
+<remove-project name="LineageOS/android_hardware_qcom_vr" />
+<remove-project name="LineageOS/android_hardware_qcom_wlan" />
+<remove-project name="LineageOS/android_system_tools_dtbtool" />
+<remove-project name="LineageOS/android_vendor_nxp_interfaces_opensource_nfc" />
+<remove-project name="LineageOS/android_vendor_nxp_opensource_external_libnfc-nci" />
+<remove-project name="LineageOS/android_vendor_nxp_opensource_frameworks" />
+<remove-project name="LineageOS/android_vendor_nxp_opensource_packages_apps_Nfc" />
+<remove-project name="LineageOS/android_vendor_nxp_opensource_halimpl" />
+<remove-project name="LineageOS/android_vendor_nxp_opensource_hidlimpl" />
+<remove-project name="LineageOS/android_vendor_nxp_opensource_halimpl" />
+<remove-project name="LineageOS/android_vendor_nxp_opensource_hidlimpl" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_audio" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_audio-hal_st-hal" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_display-commonsys-intf" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_cryptfs_hw" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_fm-commonsys" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_dataservices" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_healthd-ext" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_interfaces" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_libfmjni" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_thermal-engine" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_usb" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_vibrator" />
+<remove-project name="LineageOS/android_vendor_qcom_opensource_wfd-commonsys" />
+
+<!--havoc-->
+
+  <!-- General -->
+  <project path="art" name="android_art" remote="havoc" />
+  <project path="bionic" name="android_bionic" remote="havoc" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="havoc" />
+  <project path="development" name="android_development" remote="havoc" />
+  <project path="libcore" name="android_libcore" remote="havoc" />
+  <project path="manifest" name="android_manifest" remote="havoc" />
+
+  <!-- Build -->
+  <project path="build/blueprint" name="android_build_blueprint" remote="havoc" />
+  <project path="build/make" name="android_build" remote="revive">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="havoc">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Device -->
+  <project path="device/havoc/sepolicy" name="android_device_havoc_sepolicy" remote="havoc" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="havoc" />
+  <project path="device/qcom/sepolicy-legacy" name="android_device_qcom_sepolicy" remote="havoc" revision="eleven-legacy" />
+  <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy" remote="havoc" revision="eleven-legacy-um" />
+  <project path="device/qcom/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" remote="havoc" />
+
+  <!-- External -->
+  <project path="external/aac" name="android_external_aac" remote="havoc" />
+  <project path="external/boringssl" name="android_external_boringssl" remote="havoc" />
+  <project path="external/cldr" name="android_external_cldr" remote="havoc" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="havoc" />
+  <project path="external/gptfdisk" name="android_external_gptfdisk" remote="havoc" />
+  <project path="external/guice" name="android_external_guice" remote="havoc" />
+  <project path="external/icu" name="android_external_icu" remote="havoc" />
+  <project path="external/libavc" name="android_external_libavc" remote="havoc" />
+  <project path="external/libcxx" name="android_external_libcxx" remote="havoc" />
+  <project path="external/libexif" name="android_external_libexif" remote="havoc" />
+  <project path="external/mksh" name="android_external_mksh" remote="havoc" />
+  <project path="external/openssh" name="android_external_openssh" remote="havoc" />
+  <project path="external/perfetto" name="android_external_perfetto" remote="havoc" />
+  <project path="external/pulse" name="android_external_pulse" remote="havoc" />
+  <project path="external/robolectric-shadows" name="android_external_robolectric-shadows" remote="havoc" />
+  <project path="external/tinyalsa" name="android_external_tinyalsa" remote="havoc" />
+  <project path="external/tinycompress" name="android_external_tinycompress" remote="havoc" />
+  <project path="external/toybox" name="android_external_toybox" remote="havoc" />
+  <project path="external/tremolo" name="android_external_tremolo" remote="havoc" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/ml" name="android_frameworks_ml" groups="pdk" remote="revive" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="revive" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="revive" />
+  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="havoc" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="revive" />
+  <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="havoc" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="revive" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="havoc" />
+  <project path="frameworks/opt/timezonepicker" name="android_frameworks_opt_timezonepicker" remote="havoc" />
+
+  <!-- Hardware -->
+  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="havoc" />
+  <project path="hardware/google/pixel-sepolicy" name="android_hardware_google_pixel-sepolicy" remote="havoc" />
+  <project path="hardware/havoc/interfaces" name="android_hardware_havoc_interfaces" remote="havoc" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="havoc" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="havoc" />
+  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="revive" />
+  <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="havoc" />
+  <project path="hardware/qcom/data/ipacfg-mgr" name="android_hardware_qcom_data_ipacfg-mgr" remote="havoc" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="havoc" />
+  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="havoc" />
+  <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" remote="havoc" />
+  <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="havoc" />
+  <project path="hardware/qcom/sdm845/display" name="android_hardware_qcom_sdm845_display" remote="havoc" />
+  <project path="hardware/qcom/sm8150/data/ipacfg-mgr" name="android_hardware_qcom_sm8150_data_ipacfg-mgr" remote="havoc" />
+  <project path="hardware/qcom/sm8150/display" name="android_hardware_qcom_sm8150_display" remote="havoc" />
+  <project path="hardware/qcom/sm8150/media" name="android_hardware_qcom_sm8150_media" remote="havoc" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="havoc" />
+
+  <!-- Packages -->
+  <project path="external/asus/stitchimage" name="android_external_asus_stitchimage" remote="revive" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="revive" />
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="havoc" />
+  <project path="packages/apps/CarrierConfig" name="android_packages_apps_CarrierConfig" remote="havoc" />
+  <project path="packages/apps/ConfigCenter" name="android_packages_apps_ConfigCenter" remote="havoc" />
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="havoc" />
+  <project path="packages/apps/CustomDoze" name="android_packages_apps_CustomDoze" remote="havoc" />
+  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="havoc" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="havoc" />
+  <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="havoc" />
+  <project path="packages/apps/GamingMode" name="android_packages_apps_GamingMode" remote="havoc" />
+  <project path="packages/apps/KeyChain" name="android_packages_apps_KeyChain" remote="havoc" />
+  <project path="packages/apps/ManagedProvisioning" name="android_packages_apps_ManagedProvisioning" remote="havoc" />
+  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="havoc" />
+  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="havoc" />
+  <project path="packages/apps/PermissionController" name="android_packages_apps_PackageInstaller" remote="revive" />
+  <project path="packages/apps/PhoneCommon" name="android_packages_apps_PhoneCommon" remote="havoc" />
+  <project path="packages/apps/SecureElement" name="android_packages_apps_SecureElement" remote="havoc" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="revive" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="havoc" />
+  <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="havoc" />
+  <project path="packages/apps/SoftAPManager" name="android_packages_apps_SoftAPManager" remote="havoc" />
+  <project path="packages/apps/Snap" name="android_packages_apps_Snap" remote="havoc" />
+  <project path="packages/apps/Terminal" name="android_packages_apps_Terminal" remote="havoc" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="havoc" />
+  <project path="packages/apps/TouchGestures" name="android_packages_apps_TouchGestures" remote="havoc" />
+  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="havoc" />
+  <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="revive" />
+  <project path="packages/modules/CaptivePortalLogin" name="android_packages_modules_CaptivePortalLogin" remote="havoc" />
+  <project path="packages/modules/DnsResolver" name="android_packages_modules_DnsResolver" remote="havoc" />
+  <project path="packages/providers/ContactsProvider" name="android_packages_providers_ContactsProvider" remote="revive" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="havoc" />
+  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="revive" />
+  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="revive" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="revive" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="revive" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/abi-dumps/vndk" name="android_prebuilts_abi-dumps_vndk" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/build-tools" name="android_prebuilts_build-tools" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="android_prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.17-4.8" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/tools-extras" name="android_prebuilts_tools-extras" remote="havoc" />
+
+  <!-- System -->
+  <project path="system/bt" name="android_system_bt" remote="revive" />
+  <project path="system/core" name="android_system_core" remote="havoc" />
+  <project path="system/extras" name="android_system_extras" remote="havoc" />
+  <project path="system/hardware/interfaces" name="android_system_hardware_interfaces" remote="havoc" />
+  <project path="system/incremental_delivery" name="android_system_incremental_delivery" remote="havoc" />
+  <project path="system/libufdt" name="android_system_libufdt" remote="havoc" />
+  <project path="system/media" name="android_system_media" remote="havoc" />
+  <project path="system/netd" name="android_system_netd" remote="havoc" />
+  <project path="system/nfc" name="android_system_nfc" remote="revive" />
+  <project path="system/security" name="android_system_security" remote="havoc" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="havoc" />
+  <project path="system/timezone" name="android_system_timezone" remote="havoc" />
+  <project path="system/tools/aidl" name="android_system_tools_aidl" remote="havoc" />
+  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="havoc" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="havoc" />
+  <project path="system/vold" name="android_system_vold" remote="havoc" />
+
+  <!-- Tools -->
+  <project path="tools/metalava" name="android_tools_metalava" remote="havoc" />
+
+  <!-- Vendor -->
+  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="havoc" />
+  <project path="vendor/gapps" name="android_vendor_gapps" remote="havoc-gitlab" />
+  <project path="vendor/havoc" name="android_vendor_havoc" remote="revive" />
+  <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" remote="havoc" />
+  <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" remote="havoc" />
+  <project path="vendor/support" name="android_vendor_support" remote="havoc" />
+
+<!--Havoc's lineage-->
+<remote  name="lineage"
+           fetch="https://github.com/LineageOS"
+           revision="refs/heads/lineage-18.1" />
+
+  <!--defaults -->
+  <project path="external/expat" name="android_external_expat" groups="pdk" remote="lineage"/>
+  <project path="external/dtc" name="android_external_dtc" groups="pdk" remote="lineage"/>
+   <project path="tools/apksig" name="android_tools_apksig" groups="pdk,tradefed" remote="lineage"/>
+   <project path="external/freetype" name="android_external_freetype" groups="pdk" remote="lineage"/>
+  <!-- External -->
+  <project path="external/zlib" name="android_external_zlib" groups="pdk" remote="lineage"/>
+  <project path="external/ant-wireless/ant_client" name="android_external_ant-wireless_ant_client" remote="lineage" />
+  <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="lineage" />
+  <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" remote="lineage" />
+  <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="lineage" />
+  <project path="external/ant-wireless/hidl" name="android_external_ant-wireless_hidl" remote="lineage" />
+  <project path="external/bash" name="android_external_bash" remote="lineage" />
+  <project path="external/chromium-webview/patches" name="android_external_chromium-webview_patches" groups="pdk" remote="lineage" revision="main" >
+    <linkfile src="Android.mk" dest="external/chromium-webview/Android.mk" />
+    <linkfile src="CleanSpec.mk" dest="external/chromium-webview/CleanSpec.mk" />
+    <linkfile src="README" dest="external/chromium-webview/README" />
+  </project>
+  <project path="external/chromium-webview/prebuilt/arm" name="android_external_chromium-webview_prebuilt_arm" groups="pdk" remote="lineage" revision="main" />
+  <project path="external/chromium-webview/prebuilt/arm64" name="android_external_chromium-webview_prebuilt_arm64" groups="pdk" remote="lineage" revision="main" />
+  <project path="external/chromium-webview/prebuilt/x86" name="android_external_chromium-webview_prebuilt_x86" groups="pdk" remote="lineage" revision="main" />
+  <project path="external/chromium-webview/prebuilt/x86_64" name="android_external_chromium-webview_prebuilt_x86_64" groups="pdk" remote="lineage" revision="main" />
+  <project path="external/connectivity" name="android_external_connectivity" remote="lineage" />
+  <project path="external/exfatprogs" name="android_external_exfatprogs" remote="lineage" />
+  <project path="external/json-c" name="android_external_json-c" remote="lineage" />
+  <project path="external/htop" name="android_external_htop" remote="lineage" />
+  <project path="external/libncurses" name="android_external_libncurses" remote="lineage" />
+  <project path="external/libnfc-nxp" name="android_external_libnfc-nxp" remote="lineage" />
+  <project path="external/nano" name="android_external_nano" remote="lineage" />
+  <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="lineage" />
+  <project path="external/p7zip" name="android_external_p7zip" remote="lineage" />
+  <project path="external/pigz" name="android_external_pigz" remote="lineage" />
+  <project path="external/rsync" name="android_external_rsync" remote="lineage" />
+  <project path="external/unrar" name="android_external_unrar" remote="lineage" />
+  <project path="external/vim" name="android_external_vim" remote="lineage" />
+  <project path="external/zip" name="android_external_zip" remote="lineage" />
+
+  <!-- Hardware -->
+  <project path="hardware/broadcom/nfc" name="android_hardware_broadcom_nfc" remote="lineage" />
+  <project path="hardware/lineage/livedisplay" name="android_hardware_lineage_livedisplay" remote="lineage" />
+  <project path="hardware/qcom-caf/apq8084/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-apq8084" />
+  <project path="hardware/qcom-caf/apq8084/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-apq8084" />
+  <project path="hardware/qcom-caf/apq8084/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-apq8084" />
+  <project path="hardware/qcom-caf/bootctrl" name="android_hardware_qcom_bootctrl" remote="lineage" revision="lineage-18.1-caf" />
+  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="lineage" >
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- for AOSP sdm845 and sm8150, we override os_pickup.mk -->
+    <!--<linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />-->
+    <!--<linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />-->
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/apq8084/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8916/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8952/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8960/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8974/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8994/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/pn5xx/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/pn5xx/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
+  </project>
+  <project path="hardware/qcom-caf/bt" name="android_hardware_qcom_bt" remote="lineage" revision="lineage-18.1-caf" />
+  <project path="hardware/qcom-caf/msm8916/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-msm8916" />
+  <project path="hardware/qcom-caf/msm8916/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-msm8916" />
+  <project path="hardware/qcom-caf/msm8916/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-msm8916" />
+  <project path="hardware/qcom-caf/msm8952/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-msm8952" />
+  <project path="hardware/qcom-caf/msm8952/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-msm8952" />
+  <project path="hardware/qcom-caf/msm8952/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-msm8952" />
+  <project path="hardware/qcom-caf/msm8960/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-msm8960" />
+  <project path="hardware/qcom-caf/msm8960/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-msm8960" />
+  <project path="hardware/qcom-caf/msm8960/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-msm8960" />
+  <project path="hardware/qcom-caf/msm8974/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-msm8974" />
+  <project path="hardware/qcom-caf/msm8974/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-msm8974" />
+  <project path="hardware/qcom-caf/msm8974/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-msm8974" />
+  <project path="hardware/qcom-caf/msm8994/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-msm8994" />
+  <project path="hardware/qcom-caf/msm8994/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-msm8994" />
+  <project path="hardware/qcom-caf/msm8994/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-msm8994" />
+  <project path="hardware/qcom-caf/msm8996/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8996/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8996/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8998/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-msm8998" />
+  <project path="hardware/qcom-caf/msm8998/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-msm8998" />
+  <project path="hardware/qcom-caf/msm8998/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-msm8998" />
+  <project path="hardware/qcom-caf/sdm845/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-sdm845" />
+  <project path="hardware/qcom-caf/sdm845/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-sdm845" />
+  <project path="hardware/qcom-caf/sdm845/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-sdm845" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8250/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8250/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8250/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8350/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-18.1-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8350/display" name="android_hardware_qcom_display" remote="lineage" revision="lineage-18.1-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8350/media" name="android_hardware_qcom_media" remote="lineage" revision="lineage-18.1-caf-sm8350" />
+  <project path="hardware/qcom-caf/thermal" name="android_hardware_qcom_thermal" remote="lineage" />
+  <project path="hardware/qcom-caf/vr" name="android_hardware_qcom_vr" remote="lineage" />
+  <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" remote="lineage"  revision="lineage-18.1-caf" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Traceur" name="android_packages_apps_Traceur" remote="lineage" />
+  <project path="packages/apps/Car/Settings" name="android_packages_apps_Car_Settings" remote="lineage" />
+  <project path="packages/apps/EmergencyInfo" name="android_packages_apps_EmergencyInfo" remote="lineage" />
+  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="lineage" />
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="lineage" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools"  remote="lineage" clone-depth="1" />
+
+  <!-- System -->
+  <project path="system/tools/dtbtool" name="android_system_tools_dtbtool" remote="lineage" />
+
+  <!-- Tools -->
+  <project path="tools/extract-utils" name="android_tools_extract-utils" remote="lineage" />
+
+  <!-- Vendor -->
+  <project path="vendor/nxp/opensource/interfaces/nfc" name="android_vendor_nxp_interfaces_opensource_nfc" remote="lineage" />
+  <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="android_vendor_nxp_opensource_external_libnfc-nci" remote="lineage" />
+  <project path="vendor/nxp/opensource/commonsys/frameworks" name="android_vendor_nxp_opensource_frameworks" remote="lineage" />
+  <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="android_vendor_nxp_opensource_packages_apps_Nfc" remote="lineage" />
+  <project path="vendor/nxp/opensource/pn5xx/halimpl" name="android_vendor_nxp_opensource_halimpl" remote="lineage" revision="lineage-18.1-pn5xx" />
+  <project path="vendor/nxp/opensource/pn5xx/hidlimpl" name="android_vendor_nxp_opensource_hidlimpl" remote="lineage" revision="lineage-18.1-pn5xx" />
+  <project path="vendor/nxp/opensource/sn100x/halimpl" name="android_vendor_nxp_opensource_halimpl" remote="lineage" revision="lineage-18.1-sn100x" />
+  <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="android_vendor_nxp_opensource_hidlimpl" remote="lineage" revision="lineage-18.1-sn100x" />
+  <project path="vendor/qcom/opensource/audio" name="android_vendor_qcom_opensource_audio" remote="lineage" />
+  <project path="vendor/qcom/opensource/audio-hal/st-hal" name="android_vendor_qcom_opensource_audio-hal_st-hal" remote="lineage" />
+  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" remote="lineage" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="android_vendor_qcom_opensource_display-commonsys-intf" remote="lineage" />
+  <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="android_vendor_qcom_opensource_bluetooth_ext" remote="lineage" />
+  <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="android_vendor_qcom_opensource_packages_apps_Bluetooth" remote="lineage" />
+  <project path="vendor/qcom/opensource/commonsys/system/bt" name="android_vendor_qcom_opensource_system_bt" remote="lineage" />
+  <project path="vendor/qcom/opensource/cryptfs_hw" name="android_vendor_qcom_opensource_cryptfs_hw" remote="lineage" />
+  <project path="vendor/qcom/opensource/fm-commonsys" name="android_vendor_qcom_opensource_fm-commonsys" remote="lineage" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="lineage" />
+  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" remote="lineage" />
+  <project path="vendor/qcom/opensource/healthd-ext" name="android_vendor_qcom_opensource_healthd-ext" remote="lineage" />
+  <project path="vendor/qcom/opensource/libfmjni" name="android_vendor_qcom_opensource_libfmjni" remote="lineage" />
+  <project path="vendor/qcom/opensource/thermal-engine" name="android_vendor_qcom_opensource_thermal-engine" remote="lineage" />
+  <project path="vendor/qcom/opensource/usb" name="android_vendor_qcom_opensource_usb" remote="lineage" />
+  <project path="vendor/qcom/opensource/vibrator" name="android_vendor_qcom_opensource_vibrator" remote="lineage" />
+  <project path="vendor/qcom/opensource/wfd-commonsys" name="android_vendor_qcom_opensource_wfd-commonsys" remote="lineage" />
+
 </manifest>
