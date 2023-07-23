@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-   <remote  name="github"
-           fetch=".." />
-
   <remote  name="havoc"
            fetch="https://github.com/Havoc-OS"
            revision="eleven" />
