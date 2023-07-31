@@ -35,4 +35,8 @@
   <project path="hardware/samsung_slsi/scsc_wifibt/wifi_hal" name="android_hardware_samsung_slsi_scsc_wifibt_wifi_hal" remote="lineage" />
   <project path="hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib" name="android_hardware_samsung_slsi_scsc_wifibt_wpa_supplicant_lib" remote="lineage" />
 
+  <!-- Extra -->
+  <remove-project name="platform/external/zstd" />
+  <project path="external/zstd" name="android_external_zstd" remote="lineage" />
+
 </manifest>
