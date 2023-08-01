@@ -12,5 +12,7 @@
   <project path="vendor/xiaomi/dirac" name="xyz-sundram/vendor_xiaomi_dirac" remote="github" revision="11" />
 <!-- Kernel Trees -->
 <project path="kernel/xiaomi/tulip" name="TianWalkzzMiku/SRyzen-CAF" remote="github" revision="caf" />
-  
+<!-- Extras -->
+<remove-project name="crdroidandroid/android_frameworks_base" />
+<project path="frameworks/base" name="Nub-XD/android_frameworks_base" remote="github" revision="11.0" />
 </manifest>
