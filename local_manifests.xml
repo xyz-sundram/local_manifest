@@ -38,6 +38,8 @@
   <!-- Extra -->
   <remove-project name="platform/external/zstd" />
   <project path="external/zstd" name="android_external_zstd" remote="lineage" />
+  <remove-project name="LineageOS/android_external_chromium-webview_patches" />
+  <project path="external/chromium-webview" name="LineageOS/android_external_chromium-webview" remote="github" revision="master" />
   <project path="prebuilts/clang/host/linux-x86/clang-r383902" name="moto-common/platform_prebuilts_clang_host_linux-x86_clang-r383902" remote="github" revision="master" />
     
 </manifest>
