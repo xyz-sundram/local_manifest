@@ -7,11 +7,4 @@
   <project path="vendor/xiaomi/twolip" name="xyz-sundram/vendor_xiaomi_twolip" remote="github" revision="tiramisu" />
 <!-- Kernel Trees -->
 <project path="kernel/xiaomi/sdm660" name="xyz-sundram/android_kernel_xiaomi_sdm660" remote="github" revision="13" />
-  
-<!-- EXTRAS -->
-<remove-project name="LineageOS/android_hardware_qcom_audio" />
-<project path="kernel/xiaomi/sdm660" name="xyz-sundram/android_kernel_xiaomi_sdm660" remote="github" revision="13" />
-<remove-project name="android_device_cherish_sepolicy" />
-<project path="device/cherish/sepolicy" name="xyz-sundram/android_device_cherish_sepolicy" remote="github" revision="tiramisu" />
-
 </manifest>
