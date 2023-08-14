@@ -12,6 +12,8 @@
   <remote name="GalaxyM30s-android-12.0"
           fetch="https://github.com/GalaxyM30s"
           revision="android-12.0" />
+  
+<remote name="gitlab" fetch="https://gitlab.com" />
 
   <!-- device -->
   <project path="device/samsung/m307f" name="android_device_samsung_m307f" remote="GalaxyM30s" />
@@ -41,5 +43,6 @@
   <remove-project name="LineageOS/android_external_chromium-webview_patches" />
   <project path="external/chromium-webview" name="LineageOS/android_external_chromium-webview" remote="github" revision="master" />
   <project path="prebuilts/clang/host/linux-x86/clang-r383902" name="moto-common/platform_prebuilts_clang_host_linux-x86_clang-r383902" remote="github" revision="master" />
-    
+  <project path="vendor/gapps" name="MindTheGapps/vendor_gapps" revision="sigma" remote="gitlab" />
+  <project path="vendor/PixelLauncher" name="Ardjlon/vendor_PixelLauncher" revision="ammit" remote="github" />
 </manifest>
