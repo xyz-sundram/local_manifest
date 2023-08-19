@@ -10,7 +10,7 @@
   <project path="vendor/miuicamera" name="Havoc-Devices/android_vendor_xiaomi_tulip-MiuiCamera" remote="github" revision="eleven" />
   <project path="vendor/xiaomi/dirac" name="xyz-sundram/vendor_xiaomi_dirac" remote="github" revision="11" />
 <!-- Kernel Trees -->
-<project path="kernel/xiaomi/tulip" name="TianWalkzzMiku/SRyzen-CAF" remote="github" revision="caf" />
+<project path="kernel/xiaomi/tulip" name="xyz-sundram/kernel_xiaomi_sdm660" remote="github" revision="eleven" />
 <!-- Extras -->
 <remove-project name="crdroidandroid/android_frameworks_base" />
 <project path="frameworks/base" name="xyz-sundram/android_frameworks_base" remote="github" revision="11.0" />
