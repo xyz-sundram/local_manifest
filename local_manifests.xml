@@ -8,11 +8,10 @@
   <project path="vendor/xiaomi/tulip" name="PixelPlusUI-Devices/vendor_xiaomi_tulip" remote="github" revision="11" />
   <project path="vendor/xiaomi/sdm660-common" name="PixelPlusUI-Devices/vendor_xiaomi_tulip-common" remote="github" revision="11" />
   <project path="vendor/miuicamera" name="Havoc-Devices/android_vendor_xiaomi_tulip-MiuiCamera" remote="github" revision="eleven" />
-  <project path="vendor/gapps" name="MindTheGapps/vendor_gapps" remote="gitlab" revision="rho" />
   <project path="vendor/xiaomi/dirac" name="xyz-sundram/vendor_xiaomi_dirac" remote="github" revision="11" />
 <!-- Kernel Trees -->
 <project path="kernel/xiaomi/tulip" name="TianWalkzzMiku/SRyzen-CAF" remote="github" revision="caf" />
 <!-- Extras -->
 <remove-project name="crdroidandroid/android_frameworks_base" />
-<project path="frameworks/base" name="Nub-XD/android_frameworks_base" remote="github" revision="11.0" />
+<project path="frameworks/base" name="xyz-sundram/android_frameworks_base" remote="github" revision="11.0" />
 </manifest>
