@@ -5,7 +5,7 @@
 <!-- Vendor Trees -->
   <project path="vendor/xiaomi/twolip" name="xyz-sundram/vendor_xiaomi_twolip" remote="github" revision="4.19" />
 <!-- Kernel Trees -->
-<project path="kernel/xiaomi/sdm660" name="Atom-X-Devs/android_kernel_qcom_sdm660" remote="github" revision="android-4.19-stable" />
+<project path="kernel/xiaomi/sdm660" name="Atom-X-Devs/android_kernel_xiaomi_scarlet" remote="github" revision="a13/dynamic" />
 <!-- Others -->
 <project path="hardwre/xiaomi" name="LineageOS/android_hardware_xiaomi.git" remote="github" revision="lineage-20" />
 </manifest>
