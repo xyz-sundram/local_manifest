@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  
 <!-- Device Trees -->
-  <project path="device/xiaomi/twolip" name="xyz-sundram/device_xiaomi_twolip" remote="github" revision="lineage" />
+  <project path="device/xiaomi/twolip" name="xyz-sundram/device_xiaomi_twolip" remote="github" revision="4.19" />
 <!-- Vendor Trees -->
-  <project path="vendor/xiaomi/twolip" name="xyz-sundram/vendor_xiaomi_twolip" remote="github" revision="tiramisu" />
+  <project path="vendor/xiaomi/twolip" name="xyz-sundram/vendor_xiaomi_twolip" remote="github" revision="4.19" />
 <!-- Kernel Trees -->
-<project path="kernel/xiaomi/sdm660" name="xyz-sundram/android_kernel_xiaomi_sdm660" remote="github" revision="13" />
+<project path="kernel/xiaomi/sdm660" name="Atom-X-Devs/android_kernel_qcom_sdm660" remote="github" revision="android-4.19-stable" />
+<!-- Others -->
+<project path="hardwre/xiaomi" name="LineageOS/android_hardware_xiaomi.git" remote="github" revision="lineage-20" />
 </manifest>
