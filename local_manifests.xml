@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <!-- Device Trees -->
-  <project path="device/xiaomi/twolip" name="xyz-sundram/device_xiaomi_twolip" remote="github" revision="4.19" />
+  <project path="device/xiaomi/twolip" name="xyz-sundram/device_xiaomi_sdm660-twolip_4.19" remote="github" revision="lineage-20" />
 <!-- Vendor Trees -->
   <project path="vendor/xiaomi/twolip" name="xyz-sundram/vendor_xiaomi_twolip" remote="github" revision="4.19" />
 <!-- Kernel Trees -->
