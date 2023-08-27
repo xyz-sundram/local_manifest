@@ -8,7 +8,4 @@
 <project path="kernel/xiaomi/sdm660" name="Atom-X-Devs/android_kernel_xiaomi_scarlet" remote="github" revision="a13/dynamic" />
 <!-- Others -->
 <project path="hardwre/xiaomi" name="LineageOS/android_hardware_xiaomi.git" remote="github" revision="lineage-20" />
-
-<remove-project name="android_external_chromium-webview_prebuilt_arm64" />
-<project path="external/chromium-webview/prebuilt/arm64" name="LineageOS/android_external_chromium-webview_prebuilt_arm64" remote="lineage" revision="backup/main_20230314" />
 </manifest>
