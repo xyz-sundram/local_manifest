@@ -3,7 +3,7 @@
 <!-- Device Trees -->
   <project path="device/xiaomi/twolip" name="xyz-sundram/device_xiaomi_sdm660-twolip_4.19" remote="github" revision="lineage-20" />
 <!-- Vendor Trees -->
-  <project path="vendor/xiaomi/twolip" name="xyz-sundram/vendor_xiaomi_twolip" remote="github" revision="4.19" />
+  <project path="vendor/xiaomi/twolip" name="xyz-sundram/vendor_xiaomi_twolip_4.19-1" remote="github" revision="4.19" />
 <!-- Kernel Trees -->
 <project path="kernel/xiaomi/sdm660" name="Atom-X-Devs/android_kernel_xiaomi_scarlet" remote="github" revision="a13/dynamic" />
 <!-- Others -->
