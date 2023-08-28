@@ -3,7 +3,8 @@
 <!-- Device Trees -->
   <project path="device/xiaomi/twolip" name="xyz-sundram/device_xiaomi_twolip_4.19" remote="github" revision="non-dynamic" />
 <!-- Vendor Trees -->
-  <project path="vendor/xiaomi/twolip" name="xyz-sundram/vendor_xiaomi_twolip_4.19" remote="github" revision="crdroid" />
+  <project path="vendor/xiaomi/twolip" name="xyz-sundram/proprietary_vendor_xiaomi_twolip" remote="github" revision="lineage-20" />
+  <project path="vendor/xiaomi/sdm660-common" name="xyz-sundram/vendor_xiaomi_twolip_4.19" remote="github" revision="sdm660" />
 <!-- Kernel Trees -->
 <project path="kernel/xiaomi/sdm660" name="xyz-sundram/android_kernel_xiaomi_scarlet" remote="github" revision="a13/qti-haptics" />
 <!-- Others -->
