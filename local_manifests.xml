@@ -10,6 +10,6 @@
 <project path="kernel/xiaomi/sdm660" name="xyz-sundram/android_kernel_xiaomi_scarlet" remote="github" revision="a13/qti-haptics" />
 <!-- Others -->
 <project path="hardwre/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="github" revision="lineage-20" />
-<remove-project name="LineageOS/android_hardware_qcom_display" />
+<remove-project name="hardware_qcom-caf_sdm660_display" />
 <project path="hardware/qcom-caf/sdm660/display" name="Evolution-X/hardware_qcom-caf_sdm660_display" remote="github" revision="tiramisu" />
 </manifest>
