@@ -2,7 +2,7 @@
 <manifest>
 <!-- Device Trees -->
   <project path="device/xiaomi/tulip" name="xyz-sundram/vendor_xiaomi_twolip_4.19-1" remote="github" revision="tulip" />
-  <project path="device/xiaomi/sdm660-common" name="xyz-sundram/vendor_xiaomi_twolip_4.19-1" remote="github" revision="common" />
+  <project path="device/xiaomi/sdm660-common" name="xyz-sundram/vendor_xiaomi_twolip_4.19-1" remote="github" revision="sdm660" />
 <!-- Vendor Trees -->
   <project path="vendor/xiaomi/tulip" name="xyz-sundram/proprietary_vendor_xiaomi_twolip" remote="github" revision="tulip" />
   <project path="vendor/xiaomi/sdm660-common" name="xyz-sundram/vendor_xiaomi_twolip_4.19" remote="github" revision="sdm660" />
