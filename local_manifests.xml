@@ -13,5 +13,7 @@
 <project path="kernel/xiaomi/tulip" name="xyz-sundram/kernel_xiaomi_sdm660" remote="github" revision="eleven" />
 <!-- Extras -->
 <remove-project name="crdroidandroid/android_frameworks_base" />
-<project path="frameworks/base" name="xyz-sundram/android_frameworks_base" remote="github" revision="11.0" />
+<project path="frameworks/base" name="DUMB-ORG/android_frameworks_base" remote="github" revision="11.0" />
+<remove-project name="crdroidandroid/android_packages_apps_crDroidSettings" />
+<project path="packages/apps/crDroidSettings" name="DUMB-ORG/android_packages_apps_crDroidSettings" remote="github" revision="11.0" />
 </manifest>
