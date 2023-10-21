@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-   <remote name="gitlab" fetch="https://gitlab.com" />
 <!-- Device Trees -->
-  <project path="device/xiaomi/tulip" name="xyz-sundram/device_xiaomi_twolip" remote="github" revision="eleven" />
-  <project path="device/xiaomi/sdm660-common" name="xyz-sundram/device_xiaomi_tulip-common" remote="github" revision="11" />
+  <project path="device/xiaomi/sdm660-common" name="xyz-sundram/device_xiaomi_sdm660-common_4.19" remote="github" revision="topaz" />
+  <project path="device/xiaomi/tulip" name="xyz-sundram/android_device_xiaomi_tulip_4.19" remote="github" revision="topaz" />
 <!-- Vendor Trees -->
-  <project path="vendor/xiaomi/tulip" name="PixelPlusUI-Devices/vendor_xiaomi_tulip" remote="github" revision="11" />
-  <project path="vendor/xiaomi/sdm660-common" name="PixelPlusUI-Devices/vendor_xiaomi_tulip-common" remote="github" revision="11" />
-  <project path="vendor/miuicamera" name="Havoc-Devices/android_vendor_xiaomi_tulip-MiuiCamera" remote="github" revision="eleven" />
-  <project path="vendor/xiaomi/dirac" name="xyz-sundram/vendor_xiaomi_dirac" remote="github" revision="11" />
+  <project path="vendor/xiaomi/tulip" name="xyz-sundram/vendor_xiaomi_tulip_4.19" remote="github" revision="tiramisu" />
+  <project path="vendor/xiaomi/sdm660-common" name="xyz-sundram/vendor_xiaomi_sdm660-common_4.19" remote="github" revision="tiramisu" />
 <!-- Kernel Trees -->
-<project path="kernel/xiaomi/tulip" name="xyz-sundram/kernel_xiaomi_sdm660" remote="github" revision="eleven" />
+<project path="kernel/xiaomi/sdm660" name="xyz-sundram/android_kernel_xiaomi_scarlet" remote="github" revision="a13/dynamic" />
+<!-- hals -->
+<project path="hardware/qcom/media" name="xyz-sundram/android_hardware_qcom_media" remote="github" revision="sapphire-660-4.19"/>
+<project path="hardware/qcom/display" name="xyz-sundram/android_hardware_qcom_display" remote="github" revision="sapphire-660-4.19"/>
+<project path="vendor/qcom/opensource/audio-hal/primary-hal" name="xyz-sundram/android_hardware_qcom_audio" remote="github" revision="sapphire-660-4.19"/>
 </manifest>
