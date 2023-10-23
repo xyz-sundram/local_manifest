@@ -6,6 +6,7 @@
 <!-- Vendor Trees -->
   <project path="vendor/xiaomi/tulip" name="xyz-sundram/vendor_xiaomi_tulip_4.19" remote="github" revision="tiramisu" />
   <project path="vendor/xiaomi/sdm660-common" name="xyz-sundram/vendor_xiaomi_sdm660-common_4.19" remote="github" revision="tiramisu" />
+  <project path="vendor/bcr" name="kenway214/vendor_bcr" remote="github" revision="main" />
 <!-- Kernel Trees -->
 <project path="kernel/xiaomi/sdm660" name="xyz-sundram/android_kernel_xiaomi_scarlet" remote="github" revision="a13/dynamic" />
 <!-- hals -->
