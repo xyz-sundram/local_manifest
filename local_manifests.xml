@@ -24,8 +24,7 @@
   <project path="kernel/samsung/m30s" name="android_kernel_samsung_m30s" remote="me" clone-depth="1" />
 
   <!-- vendor -->
-  <project path="vendor/samsung/m307f" name="android_vendor_samsung_m307f" remote="galaxy" clone-depth="1" />
-  <project path="vendor/samsung/m307fn" name="android_vendor_samsung_m307fn" remote="me" clone-depth="1" />
+  <project path="vendor/samsung/m307f" name="android_vendor_samsung_m307f" remote="me" clone-depth="1" />
   <project path="vendor/samsung/m30s-common" name="android_vendor_samsung_m30s-common" remote="me" clone-depth="1" />
 
   <!-- hardware -->
