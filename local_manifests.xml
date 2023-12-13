@@ -10,7 +10,7 @@
           revision="lineage-20" />
   <remote name="lineage"
           fetch="https://github.com/LineageOS"
-          revision="lineage-20" />
+          revision="lineage-21" />
 
   <!-- device -->
   <project path="device/samsung/m307f" name="android_device_samsung_m307f" remote="me" />
