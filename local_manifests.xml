@@ -7,7 +7,7 @@
 
   <remote name="lineage20"
           fetch="https://github.com/LineageOS"
-          revision="lineage-20" />
+          revision="lineage-21" />
   <remote name="lineage"
           fetch="https://github.com/LineageOS"
           revision="lineage-21" />
