@@ -37,4 +37,5 @@
   <project path="hardware/samsung_slsi-linaro/exynos5" name="android_hardware_samsung_slsi-linaro_exynos5" remote="lineage20" />
   <project path="hardware/samsung_slsi-linaro/graphics" name="android_hardware_samsung_slsi-linaro_graphics" remote="lineage20" />
   <project path="hardware/samsung_slsi-linaro/openmax" name="android_hardware_samsung_slsi-linaro_openmax" remote="lineage20" />
+  <project path="prebuilts/clang/host/linux-x86/clang-r383902" name="moto-common/platform_prebuilts_clang_host_linux-x86_clang-r383902" remote="github" revision="master" />
 </manifest>
