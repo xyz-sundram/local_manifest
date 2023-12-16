@@ -15,13 +15,13 @@
 
   <!-- device -->
   <project path="device/samsung/m307f" name="android_device_samsung_m307f" remote="me" />
-  <project path="device/samsung/m307fn" name="android_device_samsung_m307fn" remote="galaxy" />
   <project path="device/samsung/m30s-common" name="android_device_samsung_m30s-common" remote="me" />
 
   <project path="device/samsung_slsi/sepolicy" name="android_device_samsung_slsi_sepolicy" remote="lineage" />
 
   <!-- kernel -->
   <project path="kernel/samsung/m30s" name="android_kernel_samsung_m30s" remote="me" clone-depth="1" />
+  <project path="prebuilts/clang/host/linux-x86/clang-r383902" name="moto-common/platform_prebuilts_clang_host_linux-x86_clang-r383902" remote="github" revision="master" />
 
   <!-- vendor -->
   <project path="vendor/samsung/m307f" name="android_vendor_samsung_m307f" remote="me" clone-depth="1" />
