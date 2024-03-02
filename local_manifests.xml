@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<!-- Device Tree -->
-<project path="device/xiaomi/twolip" name="xyz-sundram/device_xiaomi_twolip" remote="github" revision="rising" />
-<!-- Vendor Tree -->
-<project path="vendor/xiaomi/twolip" name="xyz-sundram/vendor_xiaomi_twolip" remote="github" revision="tiramisu" />
-<!-- Kernel Trees -->
-<project path="kernel/xiaomi/sdm660" name="xyz-sundram/android_kernel_xiaomi_sdm660" remote="github" revision="13" />
+
+ <remote name="evo-d"
+          fetch="https://github.com/Evolution-X-Devices"
+          revision="udc" />
+
+ <remote name="evo"
+          fetch="https://github.com/Evolution-X"
+          revision="udc" />
+  
+  <remote name="udc"
+          fetch="https://github.com/xyz-sundram"
+          revision="udc" />
+
+  <!-- device -->
+  <project path="device/xiaomi/tulip" name="android_device_xiaomi_tulip_4.19" remote="udc" />
+  <project path="device/xiaomi/sdm660-common" name="device_xiaomi_sdm660-common_4.19" remote="udc" />
+
+  <!-- kernel -->
+  <project path="kernel/xiaomi/sdm660" name="kernel_xiaomi_sdm660" remote="evo-d" clone-depth="1" />
+
+  <!-- vendor -->
+  <project path="vendor/xiaomi/tulip" name="vendor_xiaomi_tulip_4.19" remote="udc" clone-depth="1" />
+  <project path="vendor/xiaomi/sdm660-common" name="vendor_xiaomi_sdm660-common_4.19" remote="udc" clone-depth="1" />
+
+  <!-- hardware -->
+  <project path="hardware/qcom-caf/sdm660/display" name="hardware_qcom-caf_sdm660_display" remote="evo" />
+  <project path="hardware/qcom-caf/sdm660/media" name="hardware_qcom-caf_sdm660_media" remote="evo" />
+  <project path="hardware/qcom-caf/sdm660/audio" name="hardware_qcom-caf_sdm660_audio" remote="evo" />
 </manifest>
