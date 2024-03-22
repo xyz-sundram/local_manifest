@@ -12,9 +12,6 @@
   <remote name="udc"
           fetch="https://github.com/xyz-sundram"
           revision="udc" />
-
-  <!-- scripts -->
-  <project path="scripts" name="bouquet-playground/scripts" remote="github" revision="main" />
  
   <!-- device -->
   <project path="device/xiaomi/tulip" name="android_device_xiaomi_tulip_4.19" remote="udc" />
