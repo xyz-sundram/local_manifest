@@ -25,9 +25,9 @@
   <project path="vendor/xiaomi/sdm660-common" name="vendor_xiaomi_sdm660-common_4.19" remote="udc" clone-depth="1" />
 
   <!-- hardware -->
-  <remove-project name="LineageOS/android_hardware_qcom_audio" />
-  <remove-project name="LineageOS/android_hardware_qcom_media" />
-  <remove-project name="LineageOS/android_hardware_qcom_display" />
+  <remove-project name="LeafOS-Project/android_hardware_qcom_audio" />
+  <remove-project name="LeafOS-Project/android_hardware_qcom_media" />
+  <remove-project name="LeafOS-Project/android_hardware_qcom_display" />
   <project path="hardware/qcom-caf/sdm660/display" name="hardware_qcom-caf_sdm660_display" remote="evo" />
   <project path="hardware/qcom-caf/sdm660/media" name="hardware_qcom-caf_sdm660_media" remote="evo" />
   <project path="hardware/qcom-caf/sdm660/audio" name="hardware_qcom-caf_sdm660_audio" remote="evo" />
