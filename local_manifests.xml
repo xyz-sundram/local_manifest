@@ -13,6 +13,9 @@
           fetch="https://github.com/xyz-sundram"
           revision="udc" />
 
+  <!-- scripts -->
+  <project path="scripts" name="bouquet-playground/scripts" remote="github" revision="main" />
+ 
   <!-- device -->
   <project path="device/xiaomi/tulip" name="android_device_xiaomi_tulip_4.19" remote="udc" />
   <project path="device/xiaomi/sdm660-common" name="device_xiaomi_sdm660-common_4.19" remote="udc" />
